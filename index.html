@@ -64,6 +64,31 @@
             border-radius: 10px
         }
 
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -3;
+        }
+
+        .hero-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 7, 15, 0.68);
+            z-index: -2;
+        }
+
         /* Canvas background */
         #bgCanvas {
             position: fixed;
@@ -1305,6 +1330,10 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
         <div class="hero-content">
             <span class="hero-badge"><i class="fas fa-microchip"></i> Idea → Market Launch → Post-Launch Growth</span>
             <h1>HARENDER <span class="grad">KUMAR</span></h1>
